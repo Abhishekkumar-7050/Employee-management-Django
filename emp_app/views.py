@@ -5,8 +5,6 @@ from . models import Role , Employee , Department
 from .forms import Employeeform
 
 
-def index(request):
-    return render(request , 'index.html')
 
 def all_emp(request):
 

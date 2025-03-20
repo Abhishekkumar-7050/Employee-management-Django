@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Confirm Delete</title>
-</head>
-<body>
-    <h2>Are you sure you want to delete {{ employee.first_name }} {{ employee.last_name }}?</h2>
+
+
+
+{% extends 'index.html' %}
+
+{% block title %}Warning !!{% endblock %}
+
+{% block content %}
+
+<h2>Are you sure you want to delete {{ employee.first_name }} {{ employee.last_name }}?</h2>
     
     <form method="POST">
         {% csrf_token %}
@@ -12,5 +15,6 @@
     </form>
     
     <a href="{% url 'all_emp' %}">Cancel</a>
-</body>
-</html>
+
+
+{% endblock %}
