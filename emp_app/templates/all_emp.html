@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all _emp</title>
+</head>
+<body>
+
+    <h2> All employees</h2>
+
+    {% for empl  in  employees %}
+
+     <li> {{empl.first_name}} - {{empl.dept}} - {{empl.role}}</li>
+     {% empty %}
+            <li>No employees found.</li>
+    
+    {% endfor %}
+    
+</body>
+</html>

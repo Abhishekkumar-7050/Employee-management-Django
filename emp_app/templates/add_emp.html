@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee</title>
+</head>
+<body>
+    <h2>Add Employee</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Renders the form fields -->
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'all_emp' %}">Back to Employee List</a>
+</body>
+</html>
